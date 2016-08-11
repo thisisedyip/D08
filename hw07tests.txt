@@ -1,0 +1,49 @@
+# 10_02
+
+    list_1 = [1, [2], 2, 3, [1, 3, 6]]
+    list_2 = [[[[2]], 3, 1, 1, [1,1,1,1,1]], 1]
+    list_3 = []
+    list_4 = [1]
+    print nested_sum(list_1)  # 18
+    print nested_sum(list_2)  # 13
+    print nested_sum(list_3)  # 0
+    print nested_sum(list_4)  # 1
+
+# 10_02
+
+    list_1 = ['apple', ['bear'], 'cat', 'doggy', ['elbow', 'fin', 'garage']]
+    list_2 = [[[['apple']], 'bear', 'cat', 'doggy', 
+             ['elbow','fin','garage','house','indigo']], 'jump']
+    list_3 = []
+    list_4 = ["doggy"]
+    list_4 = [[[[[[["this"]]]]]]]
+    print capitalize_nested(list_1)
+    print capitalize_nested(list_2)
+    print capitalize_nested(list_3)
+    print capitalize_nested(list_4)
+
+# 10_03
+
+    list_1 = [1, 2, 3]
+    list_2 = [1, 3, 6]
+    list_3 = [1]
+    list_4 = [0, 0, 0, 1]
+    print cumulative_sum(list_1)  # [1, 3, 6]
+    print cumulative_sum(list_2)  # [1, 4, 10]
+    print cumulative_sum(list_3)  # [1]
+    print cumulative_sum(list_4)  # [0, 0, 0, 1]
+
+# 10_06
+
+    list_1 = ['apple', 'bear', 'cat']
+    list_2 = ['apple', 'bear', 'apples']
+    list_3 = [1,2,3]
+    list_4 = [1,45,3]
+    list_5 = ['APPLE', 'BEAR', 'APPLES']
+    list_6 = ['APPLE', 'BEAR', 'CAT']
+    print is_sorted(list_1)  # True
+    print is_sorted(list_2)  # False
+    print is_sorted(list_3)  # True
+    print is_sorted(list_4)  # False
+    print is_sorted(list_5)  # False
+    print is_sorted(list_6)  # True
