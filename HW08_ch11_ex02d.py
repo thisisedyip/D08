@@ -13,7 +13,7 @@
 #    '3: ["the"]'
 ###############################################################################
 # Imports
-
+import itertools
 
 # Body
 def invert_dict_old(d):
@@ -28,16 +28,53 @@ def invert_dict_old(d):
 
 
 def invert_dict_new(d):
+    inverse = {}
+    for key in d:
+        inverse.setdefault(d[key], [])
+        inverse[d[key]].append(key)
+    return inverse
     pass
 
 
 def print_hist_newest(d):
+    c = sorted(d.keys())
+    count = 1
+    for numbers in c:
+        while count <= max(d):
+            if count == numbers:
+                print(str(numbers)+', '+str(d[numbers]))
+                count += 1
+                break #I don't know why including this break statement makes this function work, but it does...
+            else:
+                print(str(count)+', '+'[]')
+                count += 1 
     pass
 
 ###############################################################################
 # INSERT COMPLETED CODE FROM HW08_ch11_ex02a BELOW: ###########################
 ###############################################################################
+def histogram_new(s):
+    d = dict()
+    count = 0
+    for c in s:
+        count = d.get(c, 0)
+        d[c] = count + 1
+    return d
 
+
+def get_pledge_list():
+    """ Opens pledge.txt and converts to a list, each item is a word in
+    the order it appears in the original file. returns the list.
+    """
+    # Your code here.
+    pledge_list = []
+    with open('pledge.txt', 'r') as pledge:
+        for words in pledge:
+            pledge_list.append(words.split())
+        flat_pledge_list = list(itertools.chain(*pledge_list))
+        return flat_pledge_list
+    pass
+    return pledge_list
 
 ###############################################################################
 # INSERT COMPLETED CODE FROM HW08_ch11_ex02a BELOW: ###########################

@@ -1,0 +1,11 @@
+d = {1:"blue", 2:"blue", 3:"red"}
+
+def reverse_lookup(d, v):
+	key_or_keys = []
+	for key in d:
+		if v == d[key]:
+			 key_or_keys.append(key)
+	return key_or_keys
+
+print(reverse_lookup(d, "blue")) #[1,2]
+print(reverse_lookup(d, "red")) #[3]
